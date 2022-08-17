@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main() {
+
+	int ilosc = 0;
+	char x = 0;
+	char* t = 0;
+	char* tt = 0;
+
+	while (true) {
+		cout << "Podaj znak (Wpisanie 0 zakonczy podawanie):  ";
+        cin >> x;
+
+		if (x == '0')
+			break;
+
+		if (!t)
+			t = new char[ilosc + 1];
+
+		t[ilosc] = x;
+		ilosc++;
+		tt = new char[ilosc + 1];
+
+		for (int i = 0; i < ilosc; i++)
+			tt[i] = t[i];
+
+		if (t)
+			delete[] t;
+
+		t = tt;
+		tt[ilosc] = 0;
+	}
+
+	cout << t;
+	return 0;
+}

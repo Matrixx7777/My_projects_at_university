@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b,wynik;
+    cout << "Podaj liczby naturalne dodatnie ";
+    cout << endl;
+	cout << "Podaj pierwsza liczbe: ";
+	cin >> a;
+	cout << "Podaj druga liczbe: ";
+	cin >> b;
+
+    if (a % b > 0 && a*b>0) {
+        cout << "Dzielac te liczby wyjdzie ulamek";
+    }
+    else {
+       wynik = a / b;
+       cout << "Wynik wynosi = " << wynik;
+    }
+return 0;
+}
